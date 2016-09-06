@@ -16,7 +16,7 @@ static NSString *const _Nonnull kJsonTypeKey = @"@type";
 ///                 the data can not be parsed.
 ///
 /// @return A new instance of the class messaged.
-+ (nullable instancetype)parseFromJson:(nullable NSDictionary *)json error:(NSError ** _Nullable)errorPtr;
++ (nullable instancetype)parseFromJson:(nullable NSDictionary *)json error:(NSError *_Nullable * _Nullable)errorPtr;
 
 /// Parses json patches of this type and merges it with this message.
 ///
