@@ -4,7 +4,7 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString *const kJsonTypeKey = @"@type";
+static NSString *const _Nonnull kJsonTypeKey = @"@type";
 
 @protocol GDCSerializable <NSObject>
 /// Creates a new instance by parsing Json format. If
@@ -16,7 +16,7 @@ static NSString *const kJsonTypeKey = @"@type";
 ///                 the data can not be parsed.
 ///
 /// @return A new instance of the class messaged.
-+ (instancetype)parseFromJson:(nullable NSDictionary *)json error:(NSError **)errorPtr;
++ (instancetype)parseFromJson:(nullable NSDictionary *)json error:(NSError ** _Nullable)errorPtr;
 
 /// Parses json patches of this type and merges it with this message.
 ///
