@@ -16,7 +16,7 @@ static NSString *const _Nonnull kJsonTypeKey = @"@type";
 ///                 the data can not be parsed.
 ///
 /// @return A new instance of the class messaged.
-+ (instancetype)parseFromJson:(nullable NSDictionary *)json error:(NSError ** _Nullable)errorPtr;
++ (nullable instancetype)parseFromJson:(nullable NSDictionary *)json error:(NSError ** _Nullable)errorPtr;
 
 /// Parses json patches of this type and merges it with this message.
 ///
@@ -33,5 +33,5 @@ static NSString *const _Nonnull kJsonTypeKey = @"@type";
 
 /// Merges the fields from another message (of the same type) into this
 /// message.
-- (void)mergeFrom:(id)other;
+- (void)mergeFrom:(nullable id<GDCSerializable>)other;
 @end
