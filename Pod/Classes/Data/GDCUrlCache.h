@@ -7,7 +7,7 @@
 @class GPBMessage;
 @class GPBFieldMask;
 
-
+NS_ASSUME_NONNULL_BEGIN
 @interface GDCUrlCache : NSObject
 + (GDCUrlCache *)instance;
 
@@ -16,3 +16,4 @@
 - (nullable __kindof GPBMessage *)cachedMessageForPath:(NSString *)path andRequest:(GPBMessage *)reqMessage andKeys:(GPBFieldMask *)keys expired:(BOOL *)expired;
 
 @end
+NS_ASSUME_NONNULL_END
